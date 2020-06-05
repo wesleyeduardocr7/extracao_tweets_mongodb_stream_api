@@ -1,18 +1,21 @@
-import funcoes
+from Tweet import Tweet
 
 def main():
 
     print('1 - Extrair Tweets')
     print('2 - Imprimir Tweets')
+    print('3 - Quantidade de Tweets')
     print('0 - Sair')
     
     op = int(input('Informe a Opção: '))
 
     if(op == 1):
-        quantidade_parametros = int(input('Informe a quantidade de parâmetros de busca:'))
-        funcoes.extrair_tweets(quantidade_parametros)     
+        quantidade_parametros = int(input('Informe a quantidade de parâmetros de busca no Twitter:'))
+        Tweet.extrair_tweets(quantidade_parametros)
     elif(op == 2):
-	    funcoes.imprimir_tweets()       
+	    Tweet.imprimir_tweets()
+    elif(op == 3):
+	    print(Tweet.count_tweets())
     elif(op == 0):
         exit
     else:

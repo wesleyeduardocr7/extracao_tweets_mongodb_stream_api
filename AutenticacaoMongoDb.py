@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-class AutenticacaoMongoDb():    
-
+class AutenticacaoMongoDb():
+    
     @staticmethod    
     def autenticaERetornaInstanciaDoBancoDeDados():         
         client = MongoClient("")
