@@ -11,7 +11,8 @@ class CustomStreamListener(tweepy.StreamListener):
             "tweet": tweet.text                  
         })
 
-        print(tweet.text)     
+        print(tweet.text)
+        print("\n")     
 
         return True
 
