@@ -28,13 +28,13 @@ class Tweet():
     @staticmethod 
     def imprimir_tweets():
 
-        for tweet in db.tweets_extraidos.find():
+        for tweet in db.tweets_extracao03.find():
             print('\n')
             print('Tweet: ' + str(tweet['tweet']))
 
     @staticmethod
     def count_tweets():
-        return db.tweets_extraidos.count_documents({})        
+        return db.tweets_extracao03.count_documents({})        
     
     @staticmethod
     def gerar_txt_tweets():
@@ -43,9 +43,9 @@ class Tweet():
 
         count = 1
 
-        arquivo = open('tweets_extraidos.txt', 'w', encoding='utf-8')   
+        arquivo = open('extracao03_full_retweeted.txt', 'w', encoding='utf-8')   
 
-        for tweet in db.tweets_extraidos.find():
+        for tweet in db.extracao03_full_retweeted.find():
             arquivo.write('\n')
             arquivo.write('-----------------------------------------------------------------------------------------------------------------------------------------')                        
             arquivo.write('\n')
