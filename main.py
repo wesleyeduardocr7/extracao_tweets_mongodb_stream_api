@@ -1,4 +1,7 @@
 from Tweet import Tweet
+from AutenticacaoMongoDb import AutenticacaoMongoDb
+
+db = AutenticacaoMongoDb.autenticaERetornaInstanciaDoBancoDeDados()
 
 def main():
 
@@ -6,6 +9,7 @@ def main():
     print('2 - Imprimir Tweets')
     print('3 - Quantidade de Tweets')
     print('4 - Gerar Arquivo txt com os tweers')
+    
     print('0 - Sair')
     
     op = int(input('Informe a Opção: '))
@@ -18,7 +22,7 @@ def main():
     elif(op == 3):
 	    print(Tweet.count_tweets())
     elif(op == 4):
-	    Tweet.gerar_txt_tweets()
+	    Tweet.gerar_txt_tweets() 
     elif(op == 0):
         exit
     else:
